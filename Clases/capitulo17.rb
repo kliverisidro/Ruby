@@ -1,9 +1,11 @@
 class Perro
+    #contructor
     def initialize(raza,nombre)
         @raza=raza
         @nombre=nombre
     end
     
+    #metodos
     def ladrar
         puts 'Guaguau guaguau!'
     end
@@ -12,6 +14,7 @@ class Perro
     end
 end
 
+#Se crea objeto
 d=Perro.new('Labrador','Benzy')
 
 d.ladrar
