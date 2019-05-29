@@ -1,2 +1,7 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
+<% @articulos.each do |articulo|%>
+    <h1><%= link_to articulo.title,articulo %></h1>
+    <p><%=articulo.body%></p>
+    <%= link_to "Editar", edit_article_path(articulo)%>
+    <%= link_to"Eliminar #{articulo.title}", articulo, method: :delete, data:{confirm: "Estas seguro de eliminar el articulo?"} %>
+    
+<%end%>

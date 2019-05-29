@@ -1,0 +1,8 @@
+<%= form_with(model:@article) do |form|%>
+    <%= form.label "Titulo" %>
+    <%= form.text_field :title %>
+    <%= form.label "Cuerpo" %>
+    <%= form.text_area :body %>
+    <%= form.submit "Ok" %>
+    <%= link_to "Atras", articles_path %>
+<%end%>
