@@ -1,7 +1,9 @@
 <% @articulos.each do |art|%>
-    <h1>
+
+<div class="jumbotron color-a">
+    <h2 class="text-center">
         <%= link_to art.title,art %>
-    </h1>
-    
-    <p><%= art.body%></p>
+    </h2>
+    <p class="text-center"><%= art.body%></p>
+</div>
 <%end%>
