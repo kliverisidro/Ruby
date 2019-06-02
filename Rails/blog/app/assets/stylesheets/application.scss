@@ -15,5 +15,37 @@
  */
 
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
-@import "bootstrap-sprockets";
-@import "bootstrap";
+
+$title: #000;
+$fondo: #fff;
+$color-a: #F3F2B4;
+$color-b: #FFFFD3;
+$color-c: #F48060;
+$color-d: #C02727;
+
+$colors : (
+    title:$title,
+    fondo:$fondo,
+    color-a:$color-a,
+    color-b:$color-b,
+    color-c:$color-c,
+    color-d:$color-d
+);
+
+body{
+    background-color:$fondo;
+}
+
+@each $color_name,$color in $colors{
+    .#{$color-name}{
+        background-color:$color !important;
+    }
+    
+    .#{$color-name}-text{
+        color:$color !important;
+    }
+}
+.nav-link{
+    color:white !important;
+    
+}
