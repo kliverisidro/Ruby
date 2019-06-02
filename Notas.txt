@@ -1,0 +1,34 @@
+Observaciones.
+- Las vistas necesitan controladores.
+
+Imprimir logs
+- raise params.to_yaml - parametros que se envian.
+
+
+
+Teclas:
+- Q - Salir de Git.
+- Ctrl+D - Salir de consola.
+
+
+Rails
+- puma - correr el servidor.
+- rails g controller [nomre_plural] [Vista vista vista]
+- rake db:create
+- rails d controller [nomre_plural] [Vista vista vista]
+- rails g model [nombre_singular] [nombre:tipo]
+- rake db:migrate
+- rails console
+ + articulo=Aticule.new
+ + articulo.title="Titulo"
+ + articulo.body="Cuerpo"
+ + articulo.save
+ + Article.find([nro_id])
+ + Article.all
+ + Article.first
+ + Article.second
+ + Article.third
+ + Article.destroy_all
+ 
+ 
+ 
