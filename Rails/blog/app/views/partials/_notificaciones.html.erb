@@ -1,6 +1,13 @@
 <% if !notice.nil?%>
-    <p><%=notice%></p>
+    <div class="alert alert-dismissible alert-info">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <%=notice%>
+    </div>
 <%end%>
 <% if !alert.nil?%>
-    <p><%=alert%></p>
+    <div class="alert alert-dismissible alert-warning">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <h4 class="alert-heading">Warning!</h4>
+        <%=alert%>
+    </div>
 <%end%>
