@@ -24,6 +24,7 @@ $color-c: #F48060;
 $color-d: #C02727;
 
 $colors : (
+    jumbotron:$color-a,
     title:$title,
     fondo:$fondo,
     color-a:$color-a,
@@ -47,5 +48,21 @@ body{
 }
 .nav-link{
     color:white !important;
+}
+.space-a{
+    margin-top: 20px !important;
+}
+.space-title{
+    margin-top: 20px !important;
+    margin-bottom: 40px !important;
+}
+.space-label-right{
+    padding-right: 30px;
+}
+.form-title{
     
+}
+.col-form-label{
+    font-style: italic;
+    font-size: 18px;
 }

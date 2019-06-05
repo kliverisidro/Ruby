@@ -1,12 +1,14 @@
-<div class="row">
-    <% @articulos.each do |articulo|%>
-        <div class="col-sm-12 col-md-6 col-lg-4">
-            <div class="jumbotron">
-                <h1><%= link_to articulo.title,articulo %></h1>
-                <p><%=articulo.body%></p>
-                <%= link_to "Editar", edit_article_path(articulo), class:"btn btn-warning"%>
-                <%= link_to"Eliminar #{articulo.title}", articulo, method: :delete, data:{confirm: "Estas seguro de eliminar el articulo?"} , class:"btn btn-danger" %>
+<div class="container-fluid">
+    <div class="row">
+        <% @articulos.each do |articulo|%>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="jumbotron">
+                    <h1><%= link_to articulo.title,articulo %></h1>
+                    <p><%=articulo.body%></p>
+                    <%= link_to "Editar", edit_article_path(articulo), class:"btn btn-warning"%>
+                    <%= link_to"Eliminar #{articulo.title}", articulo, method: :delete, data:{confirm: "Estas seguro de eliminar el articulo?"} , class:"btn btn-danger" %>
+                </div>
             </div>
-        </div>
-    <%end%>
+        <%end%>
+    </div>
 </div>

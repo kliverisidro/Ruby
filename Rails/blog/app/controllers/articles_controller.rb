@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show,:edit,:update,:destroy]
-  before_action :imprimir, except: [:show,:update,:destroy]
+  
   
   def index
     @articulos=Article.all

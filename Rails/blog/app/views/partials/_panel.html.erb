@@ -1,0 +1,6 @@
+<div class="list-group">
+  <%= link_to "Categorias", categories_path, class:"list-group-item list-group-item-action active"%>
+  <% @categorias.each do |categoria|%>
+    <%= link_to categoria.name, categoria, class:"list-group-item list-group-item-action"%>
+  <% end%>
+</div>
