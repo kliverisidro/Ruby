@@ -1,4 +1,16 @@
+<style type="text/css" media="screen">
+    .jumbotron{
+        background: <%= @category.color %> !important;
+    }
+</style>
+
 <div class="jumbotron">
+  <% if !@category.user.nil?%>
+       <p>
+        <strong>Creado por:</strong>
+        <%= @category.user.email %>
+      </p>
+   <% end %>
   <p>
     <strong>Name:</strong>
     <%= @category.name %>
