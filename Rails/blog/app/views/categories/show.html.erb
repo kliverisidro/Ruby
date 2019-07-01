@@ -1,26 +1,35 @@
 <style type="text/css" media="screen">
     .jumbotron{
+        margin-top: 10px !important;
+    }
+    .categories-show{
         background: <%= @category.color %> !important;
+        
     }
 </style>
 
-<div class="jumbotron">
-  <% if !@category.user.nil?%>
-       <p>
-        <strong>Creado por:</strong>
-        <%= @category.user.email %>
-      </p>
-   <% end %>
-  <p>
-    <strong>Name:</strong>
-    <%= @category.name %>
-  </p>
-  
-  <p>
-    <strong>Color:</strong>
-    <%= @category.color %>
-  </p>
-  
-  <%= link_to 'Edit', edit_category_path(@category) %> |
-  <%= link_to 'Back', categories_path %>
+<div class="categories-show">
+    <h1 class="text-center"><%=@category.name%></h1>
+    <h5 class="text-center">
+        <% if !@category.user.nil?%>
+            Creado por <strong><%= @category.user.email %></strong>
+        <% end %>
+    </h5>    
+</div>
+
+<div class="row">
+    <%= @category.articles.each do |article| %>
+    <div class="col-md-3">
+        <div class="jumbotron">
+            <h2>
+                <%=article.title%>
+            </h2>
+            <p><%=truncate(article.body,length:250)%></p>
+            <%= link_to 'Ver mas', article, class:"btn btn-info" %>
+            <%if user_signed_in? && current_user.is_editor?%>
+            <%= link_to 'Edit', edit_category_path(@category) %> |
+            <%end%>
+        </div>
+    </div>
+    <%end%>
 </div>

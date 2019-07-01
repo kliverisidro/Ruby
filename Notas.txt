@@ -1,21 +1,22 @@
+git commit -m "011/365 Se agrega relaciones para mostrar articulos de una categoria y categorias de un acticulo #365DaysOfCOde"
 Observaciones.
 - Las vistas necesitan controladores.
 
-Imprimir logs
+Imprimir logs:
 - raise params.to_yaml - parametros que se envian.
 
-
+Ruby:
+- <%= raise @categorias.to_yaml %> - provocar error mostrando los campos y datos de categorias.
 
 Teclas:
 - Q - Salir de Git.
 - Ctrl+D - Salir de consola.
 
-
-Rails
+Rails:
 - puma - correr el servidor.
-- rails g controller [nomre_plural] [Vista vista vista]
+- rails g controller [nombre_plural] [Vista vista vista]
 - rake db:create
-- rails d controller [nomre_plural] [Vista vista vista]
+- rails d controller [nombre_plural] [Vista vista vista]
 - rails g model [nombre_singular] [nombre:tipo]
 - rake db:migrate
 - rails console
@@ -29,6 +30,8 @@ Rails
  + Article.second
  + Article.third
  + Article.destroy_all
- 
- 
- 
+- rails g devise:install - instala el devese
+- rails g devise user - genera el modelo user
+
+Concern
+- self - instancia

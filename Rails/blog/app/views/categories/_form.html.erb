@@ -4,8 +4,7 @@
         <div class="jumbotron space-a">
             <fiedset>
               <h1 class="text-center space-title form-title"><%="#{title} Categoria"%></h1>
-              <%= form_with(model: category, local: true) do |form| %>
-                <% if category.errors.any? %>
+              <% if category.errors.any? %>
                   <div id="error_explanation">
                     <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
                     <ul>
@@ -15,6 +14,7 @@
                     </ul>
                   </div>
                 <% end %>
+              <%= form_with(model: category, local: true) do |form| %>
                 <div class="form-group row">
                     <%= form.label :name, class:"offset-md-2 col-md-3 col-form-label text-right space-label-right" %>
                     <%= form.text_field :name, class:"col-md-4 form-control" %>
